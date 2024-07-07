@@ -1,0 +1,5 @@
+title: Programming Tutorials
+description: This repository is a collection of tutorials for software engineers focusing on architecture, principles, best practices, and approaches to problem solving.
+remote_theme: pages-themes/slate@v0.2.0
+plugins:
+  - jekyll-remote-theme
