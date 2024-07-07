@@ -13,8 +13,8 @@ These are high-level topics that group tutorials into modules. They are not mean
 This section looks at the different algorithms used in everyday problem solving. An algorithm is a series of predefined steps that must be performed to achieve a specific task. Like pressing a specific button sequence or combination in a video game to perform a move or activate a power-up. Similarly an algorithm requires a series of steps to be executed to achieve the desired output. Algorithms provide a flow for solving a problem, and thus the symbol for Water (🜄).
 
 
-### [Sorting](sorting.md)
-
+### [Sorting](sorting/)
+#### [Bubble Sort](sorting/bubble/)
 
 
 ## 🜃 Software Design Patterns
