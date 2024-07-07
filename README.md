@@ -27,4 +27,4 @@ This section looks at different ways of testing our software. From unit testing 
 
 ## License
 
-Programming Tutorials © 2024 by Michael Vinogradov are licensed under [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)
+© 2024 by Michael Vinogradov & licensed under [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)
