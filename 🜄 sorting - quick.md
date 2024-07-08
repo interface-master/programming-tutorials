@@ -12,7 +12,7 @@ permalink: sorting/quick/
 | Worst Running Time:   |       n²     |
 | Memory consumption:   |     log n    |
 
-The Quick Sort gets it's name from the significant improvement on speed and complexity that it offers over it's predecessors. It works by dividing the list into sub-lists by pivoting around the middle point of the array, and then sorting items into the two sub-arrays based on whether they're less than or greater than the pivot point.
+The Quick Sort gets its name from the significant improvement on speed and complexity that it offers over its predecessors. It works by dividing the list into sub-lists by pivoting around the middle point of the array, and then sorting items into the two sub-arrays based on whether they're less than or greater than the pivot point.
 
 An important thing to note here is that unlike the previous algorithms which only required one extra block of memory to hold a temporary value while swapping two elements, the Quick Sort does consume a bunch more memory as it creates sub-arrays of all the elements. These arrays are short-lived, but do require this memory to be available - so keep that in mind when considering this algorithm over the others.
 
@@ -83,7 +83,7 @@ function quickSortProcedure(list) {
 }
 ```
 
-While a traditional implementation of this might use recursion to process sub-arrays, this particular implementation uses a queue and loops over the queue until it is empty. One of the benefits of this approach is that it allows the queue to be processed in parallell. If we have multiple cores available we can send each chunk of the array in the queue to a different processing unit and perform the task in a fraction of the time.
+While a traditional implementation of this might use recursion to process sub-arrays, this particular implementation uses a queue and loops over the queue until it is empty. One of the benefits of this approach is that it allows the queue to be processed in parallel. If we have multiple cores available we can send each chunk of the array in the queue to a different processing unit and perform the task in a fraction of the time.
 
 Similarly as before we can enhance the function with observability by adding a timer and counters. Note, the counters are added outside the `quickSort` function as they are also used in the `quickSortProcedure`, so when testing this remember to reset the counters before each test:
 

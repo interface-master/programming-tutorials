@@ -12,7 +12,7 @@ permalink: sorting/bubble/
 | Worst Running Time:   |      n²    |
 | Memory consumption:   |      1     |
 
-We will start with the simplest sort to lay the groundwork for understanding sorting algorithms. The bubble sort is only here for educational purposes to better understand algorithms and should never be used in production. It's performance is terrible, and the code is too simple to be of any educational value. The only thing useful in this section is the concept of understanding algorithms.
+We will start with the simplest sort to lay the groundwork for understanding sorting algorithms. The bubble sort is only here for educational purposes to better understand algorithms and should never be used in production. Its performance is terrible, and the code is too simple to be of any educational value. The only thing useful in this section is the concept of understanding algorithms.
 
 The bubble sort algorithm works by looking through the list and comparing two neighbouring elements. If they are out of order, they are swapped. Once the algorithm reaches the end of the list, it starts again. Once it has made a single pass through the list without swapping any items - the list is sorted. Here it is illustrated in basic JavaScript:
 

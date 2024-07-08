@@ -27,6 +27,6 @@ A good exploration of improving algorithm complexity.
 
 As the name suggests a significant improvement over the others.
 
-### Merge Sort
+### [Merge Sort](merge/)
 
 Did you see that?
