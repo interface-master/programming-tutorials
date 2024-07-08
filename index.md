@@ -14,7 +14,9 @@ This section looks at the different algorithms used in everyday problem solving.
 
 
 ### [Sorting](sorting/)
-#### [Bubble Sort](sorting/bubble/)
+
+- [Bubble Sort](sorting/bubble/)
+- [Selection Sort](sorting/selection/)
 
 
 ## 🜃 Software Design Patterns

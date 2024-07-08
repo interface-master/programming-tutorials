@@ -2,7 +2,7 @@
 permalink: sorting/bubble/
 ---
 
-## Bubble
+## Bubble Sort
 
 |                       |            |
 | --------------------- | :--------: |
@@ -54,6 +54,7 @@ Now let's look at the complexity in terms of computational operations performed.
 function bubbleSort(list) {
     // default value to kick off the loop
     var changed = true;
+    var start = new Date();
     var counterA = 0;
     var counterB = 0;
     // keep looping while any changes are made
@@ -73,7 +74,10 @@ function bubbleSort(list) {
             }
         }
     }
-    console.log("Finished with ", counterA, " comparisons and ", counterB, " swaps");
+    // return the sorted list
+    var end = new Date();
+    var time = end - start;
+    console.log("Finished in ", time, "ms with ", counterA, " comparisons and ", counterB, " swaps");
     return list;
 }
 ```
@@ -86,4 +90,4 @@ console.log("Sorted: ", bubbleSort([9, 8, 7, 6, 5, 4, 3, 2, 1]));
 console.log("Sorted: ", bubbleSort([1, 2, 3, 4, 5, 6, 7, 8, 9]));
 ```
 
-The first run performed **56** comparisons and **25** swaps; the second run performed **72** comparisons and **36** swaps; and finally the third run performed only **8** comparisons and **no** swaps to sort 9 items. As you can imagine, the larger the list and the more operations and swaps that will have to be performed - the longer the script will take.
+The first run performed **56** comparisons and **25** swaps; the second run performed **72** comparisons and **36** swaps; and finally the third run performed only **8** comparisons and **0** swaps to sort 9 items. As you can imagine, the larger the list and the more operations and swaps that will have to be performed - the longer the script will take.

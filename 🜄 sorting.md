@@ -11,11 +11,11 @@ In this module we will explore different sorting algorithms and evaluate their p
 For a more comprehensive list of the different algorithms check out this [Wikipedia page](https://en.wikipedia.org/wiki/Sorting_algorithm).
 
 
-### [Bubble Sort](bubble_sort.md)
+### [Bubble Sort](bubble/)
 
 An introduction to algorithms, but otherwise a very bad sort.
 
-### Selection Sort
+### [Selection Sort](selection/)
 
 Probably worse than Bubble Sort, but a good exploration of improving an algorithm.
 
