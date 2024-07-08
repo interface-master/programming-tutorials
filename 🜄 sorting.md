@@ -19,7 +19,7 @@ An introduction to algorithms, but otherwise a very bad sort.
 
 Probably worse than Bubble Sort, but a good exploration of improving an algorithm.
 
-### Insertion Sort
+### [Insertion Sort](insertion/)
 
 A good exploration of improving algorithm complexity.
 
