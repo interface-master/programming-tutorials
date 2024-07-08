@@ -7,8 +7,9 @@ permalink: sorting/insertion/
 |                       |           |
 | --------------------- | :-------: |
 | Type:                 | Selection |
-| Average Running Time: |     n²    |
 | Best Running Time:    |     n     |
+| Average Running Time: |     n²    |
+| Worst Running Time:   |     n²    |
 | Memory consumption:   |     1     |
 
 We will now look at the Insertion Sort algorith, which by the looks of the table above performs just as poorly as the Bubble Sort, however, in practice you will find this algorithm a bit more efficient. Also, similar to the Selection Sort, it is a good example for understanding the algorithm from a real-world application.

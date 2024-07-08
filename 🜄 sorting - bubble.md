@@ -7,8 +7,9 @@ permalink: sorting/bubble/
 |                       |            |
 | --------------------- | :--------: |
 | Type:                 | Exchanging |
-| Average Running Time: |      n²    |
 | Best Running Time:    |      n     |
+| Average Running Time: |      n²    |
+| Worst Running Time:   |      n²    |
 | Memory consumption:   |      1     |
 
 We will start with the simplest sort to lay the groundwork for understanding sorting algorithms. The bubble sort is only here for educational purposes to better understand algorithms and should never be used in production. It's performance is terrible, and the code is too simple to be of any educational value. The only thing useful in this section is the concept of understanding algorithms.

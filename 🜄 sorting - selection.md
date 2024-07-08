@@ -7,8 +7,9 @@ permalink: sorting/selection/
 |                       |           |
 | --------------------- | :-------: |
 | Type:                 | Selection |
-| Average Running Time: |     n²    |
 | Best Running Time:    |     n²    |
+| Average Running Time: |     n²    |
+| Worst Running Time:   |     n²    |
 | Memory consumption:   |     1     |
 
 We will now look at the Selection Sort algorithm, once again, for educational purposes only. As you can see from the table above this algorithm isn't much better than the Bubble Sort in terms of complexity. In fact the Best Running Time for the Selection Sort is worse than for the Bubble Sort.
