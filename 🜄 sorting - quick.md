@@ -31,8 +31,8 @@ function quickSort(list) {
         var returnValue = quickSortProcedure(list.slice(process.left, process.right + 1));
         // swap items accordingly
         for (var i = process.left; i <= process.right; i++) {
-            if (list[i] != returnValue.array[i - process.left]) {
-                list[i] = returnValue.array[i - process.left];
+            if (list[i] != returnValue.list[i - process.left]) {
+                list[i] = returnValue.list[i - process.left];
             }
         }
         // add the sub-arrays to the processing queue
@@ -53,37 +53,37 @@ function quickSort(list) {
 
 // this is the procedure that splits the given array
 // into three separate arrays around the pivot point
-function quickSortProcedure(array) {
+function quickSortProcedure(list) {
     // return if the array can't be split any further
-    if (array.length <= 1) return array;
+    if (list.length <= 1) return list;
     // find midpoint
-    var pivot = Math.floor(array.length / 2);
-    var pivotVal = array[pivot];
+    var pivot = Math.floor(list.length / 2);
+    var pivotVal = list[pivot];
     // split into three parts
-    var arrayLeft = new Array();
-    var arrayPivot = new Array();
-    var arrayRight = new Array();
-    for (var i = 0; i < array.length; i++) {
+    var listLeft = new Array();
+    var listPivot = new Array();
+    var listRight = new Array();
+    for (var i = 0; i < list.length; i++) {
         if (i != pivot) {
-            if (array[i] < pivotVal) {
-                arrayLeft.push(array[i]);
+            if (list[i] < pivotVal) {
+                listLeft.push(list[i]);
             } else {
-                arrayRight.push(array[i]);
+                listRight.push(list[i]);
             }
         } else {
-            arrayPivot.push(array[i]);
+            listPivot.push(list[i]);
         }
     }
     // merge back together
-    var mergedArray = arrayLeft.concat(arrayPivot).concat(arrayRight);
-    var leftLen = arrayLeft.length > 0 ? arrayLeft.length : null;
-    var rightLen = arrayRight.length > 0 ? arrayRight.length : null;
+    var mergedList = listLeft.concat(listPivot).concat(listRight);
+    var leftLen = listLeft.length > 0 ? listLeft.length : null;
+    var rightLen = listRight.length > 0 ? listRight.length : null;
     // return
-    return { array: mergedArray, left: leftLen, right: rightLen };
+    return { list: mergedList, left: leftLen, right: rightLen };
 }
 ```
 
-While a traditional implementation of this might use recursion to process sub-arrays, this particular implementation uses a queue and loops over the queue until it is empty.
+While a traditional implementation of this might use recursion to process sub-arrays, this particular implementation uses a queue and loops over the queue until it is empty. One of the benefits of this approach is that it allows the queue to be processed in parallell. If we have multiple cores available we can send each chunk of the array in the queue to a different processing unit and perform the task in a fraction of the time.
 
 Similarly as before we can enhance the function with observability by adding a timer and counters. Note, the counters are added outside the `quickSort` function as they are also used in the `quickSortProcedure`, so when testing this remember to reset the counters before each test:
 
@@ -103,9 +103,9 @@ function quickSort(list) {
         var returnValue = quickSortProcedure(list.slice(process.left, process.right + 1));
         // swap items accordingly
         for (var i = process.left; i <= process.right; i++) {
-            if (list[i] != returnValue.array[i - process.left]) {
+            if (list[i] != returnValue.list[i - process.left]) {
                 counterB++;
-                list[i] = returnValue.array[i - process.left];
+                list[i] = returnValue.list[i - process.left];
             }
         }
         // add the sub-arrays to the processing queue
@@ -128,36 +128,36 @@ function quickSort(list) {
     return list;
 }
 
-function quickSortProcedure(array) {
+function quickSortProcedure(list) {
     // return if the array can't be split any further
-    if (array.length <= 1) return array;
+    if (list.length <= 1) return list;
     // find midpoint
-    var pivot = Math.floor(array.length / 2);
-    var pivotVal = array[pivot];
+    var pivot = Math.floor(list.length / 2);
+    var pivotVal = list[pivot];
     // split into three parts
-    var arrayLeft = new Array();
-    var arrayPivot = new Array();
-    var arrayRight = new Array();
-    for (var i = 0; i < array.length; i++) {
+    var listLeft = new Array();
+    var listPivot = new Array();
+    var listRight = new Array();
+    for (var i = 0; i < list.length; i++) {
         if (i != pivot) {
-            if (array[i] < pivotVal) {
+            if (list[i] < pivotVal) {
                 counterA++;
-                arrayLeft.push(array[i]);
+                listLeft.push(list[i]);
             } else {
                 counterA++;
-                arrayRight.push(array[i]);
+                listRight.push(list[i]);
             }
         } else {
             counterA++;
-            arrayPivot.push(array[i]);
+            listPivot.push(list[i]);
         }
     }
     // merge back together
-    var mergedArray = arrayLeft.concat(arrayPivot).concat(arrayRight);
-    var leftLen = arrayLeft.length > 0 ? arrayLeft.length : null;
-    var rightLen = arrayRight.length > 0 ? arrayRight.length : null;
+    var mergedList = listLeft.concat(listPivot).concat(listRight);
+    var leftLen = listLeft.length > 0 ? listLeft.length : null;
+    var rightLen = listRight.length > 0 ? listRight.length : null;
     // return
-    return { array: mergedArray, left: leftLen, right: rightLen };
+    return { list: mergedList, left: leftLen, right: rightLen };
 }
 ```
 
