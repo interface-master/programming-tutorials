@@ -23,7 +23,7 @@ Probably worse than Bubble Sort, but a good exploration of improving an algorith
 
 A good exploration of improving algorithm complexity.
 
-### Quick Sort
+### [Quick Sort](quick/)
 
 As the name suggests a significant improvement over the others.
 

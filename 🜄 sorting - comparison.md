@@ -23,6 +23,10 @@ _All tests were ran on the same list of 10000 integers. First on a list of rando
 | Insertion (reversed) |          84 |          50k |     50k |
 | Insertion (sorted)   |           1 |          10k |       0 |
 |                      |             |              |         |
+| Quick (random)       |          26 |         191k |    116k |
+| Quick (reversed)     |          15 |         166k |     99k |
+| Quick (sorted)       |           8 |         161k |       0 |
+|                      |             |              |         |
 
 
 
