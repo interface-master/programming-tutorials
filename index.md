@@ -19,6 +19,7 @@ This section looks at the different algorithms used in everyday problem solving.
 - [Selection Sort](sorting/selection/)
 - [Insertion Sort](sorting/insertion/)
 - [Quick Sort](sorting/quick/)
+- [Merge Sort](sorting/merge/)
 
 
 ## 🜃 Software Design Patterns
